@@ -20,32 +20,32 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\BepInEx.Core\BepInEx.Core.csproj"/>
-        <ProjectReference Include="..\BepInEx.Preloader.Core\BepInEx.Preloader.Core.csproj" PrivateAssets="All"/>
+        <ProjectReference Include="..\BepInEx.Core\BepInEx.Core.csproj" />
+        <ProjectReference Include="..\BepInEx.Preloader.Core\BepInEx.Preloader.Core.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\vendor\Il2CppAssemblyUnhollower\AssemblyUnhollower\AssemblyUnhollower.csproj" />
+        <ProjectReference Include="..\vendor\Il2CppAssemblyUnhollower\UnhollowerBaseLib\UnhollowerBaseLib.csproj" />
+        <ProjectReference Include="..\vendor\Il2CppAssemblyUnhollower\UnhollowerRuntimeLib\UnhollowerRuntimeLib.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="BepInEx.Il2Cpp.TlsAdapter" Version="1.0.1"/>
-        <PackageReference Include="HarmonyX" Version="2.5.5"/>
-        <PackageReference Include="Iced" Version="1.13.0"/>
-        <PackageReference Include="Il2CppAssemblyUnhollower.BaseLib" Version="0.4.16.0"/>
-        <PackageReference Include="Il2CppAssemblyUnhollower.BaseLib.Legacy" Version="0.4.16.0"/>
-        <PackageReference Include="Il2CppAssemblyUnhollower.Tool" Version="0.4.16.0"/>
-        <PackageReference Include="Il2CppDumper" Version="6.6.4"/>
-        <PackageReference Include="Il2CppReferenceLibs.Core" Version="1.0.0" IncludeAssets="compile"/>
-        <PackageReference Include="MonoMod.RuntimeDetour" Version="21.9.19.1"/>
-        <PackageReference Include="Samboy063.Cpp2IL.Core" Version="2021.3.7"/>
+        <PackageReference Include="BepInEx.Il2Cpp.TlsAdapter" Version="1.0.1" />
+        <PackageReference Include="HarmonyX" Version="2.5.5" />
+        <PackageReference Include="Iced" Version="1.13.0" />
+        <PackageReference Include="Il2CppDumper" Version="6.6.4" />
+        <PackageReference Include="Il2CppReferenceLibs.Core" Version="1.0.0" IncludeAssets="compile" />
+        <PackageReference Include="MonoMod.RuntimeDetour" Version="21.9.19.1" />
+        <PackageReference Include="Samboy063.Cpp2IL.Core" Version="2021.3.7" />
     </ItemGroup>
-    <Import Project="..\BepInEx.Shared\BepInEx.Shared.projitems" Label="Shared"/>
+    <Import Project="..\BepInEx.Shared\BepInEx.Shared.projitems" Label="Shared" />
 
     <!-- CopyLocalLockFileAssemblies causes to also output shared assemblies: https://github.com/NuGet/Home/issues/4837#issuecomment-354536302 -->
     <!-- Since all core assemblies usually follow naming of System.*, we just delete them for now -->
     <!-- Also delete deps.json as they are not used by mono -->
     <Target Name="DeleteSys" AfterTargets="Build">
         <ItemGroup>
-            <FilesToDelete Include="$(OutputPath)System.*.dll"/>
-            <FilesToDelete Include="$(OutputPath)*.deps.json"/>
+            <FilesToDelete Include="$(OutputPath)System.*.dll" />
+            <FilesToDelete Include="$(OutputPath)*.deps.json" />
         </ItemGroup>
-        <Delete Files="@(FilesToDelete)"/>
+        <Delete Files="@(FilesToDelete)" />
     </Target>
 
 </Project>

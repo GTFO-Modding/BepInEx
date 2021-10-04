@@ -1,0 +1,3 @@
+[submodule "vendor/Il2CppAssemblyUnhollower"]
+	path = vendor/Il2CppAssemblyUnhollower
+	url = https://github.com/GTFO-Modding/Il2CppAssemblyUnhollower.git

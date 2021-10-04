@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using BepInEx.Logging;
 using BepInEx.Shared;
 using MonoMod.Utils;
@@ -9,7 +9,7 @@ namespace BepInEx.Preloader.Core.Logging
     {
         public static void PrintLogInfo(ManualLogSource log)
         {
-            var consoleTitle = $"BepInEx {Paths.BepInExVersion} - {Paths.ProcessName}";
+            var consoleTitle = $"BepInEx (GTFO-Modding) {Paths.BepInExVersion} - {Paths.ProcessName}";
             log.LogMessage(consoleTitle);
 
             if (ConsoleManager.ConsoleActive)

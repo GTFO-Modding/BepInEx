@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28922.388
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BepInExTests", "BepInExTests\BepInExTests.csproj", "{E7CD429A-D057-48E3-8C51-E5C934E8E07B}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -33,15 +33,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Markdown", "Markdown", "{68
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BepInEx.Shared", "BepInEx.Shared\BepInEx.Shared.shproj", "{5C7847FB-C16D-47BD-BB17-1045669F9AA7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unhollower", "Unhollower", "{6BADFA02-2671-424F-AF73-255DA0589F92}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnhollowerBaseLib", "vendor\Il2CppAssemblyUnhollower\UnhollowerBaseLib\UnhollowerBaseLib.csproj", "{4C7FDF92-D420-48E0-A609-5C1AF600DC02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnhollowerRuntimeLib", "vendor\Il2CppAssemblyUnhollower\UnhollowerRuntimeLib\UnhollowerRuntimeLib.csproj", "{3CB28671-6BB6-4781-A702-F93D6226ECA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyUnhollower", "vendor\Il2CppAssemblyUnhollower\AssemblyUnhollower\AssemblyUnhollower.csproj", "{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		BepInEx.Shared\BepInEx.Shared.projitems*{15f8bc38-a761-4f93-8903-1b531ac5d9f9}*SharedItemsImports = 5
 		BepInEx.Shared\BepInEx.Shared.projitems*{429d5f83-7fec-4d09-ab82-e868eb61af59}*SharedItemsImports = 5
 		BepInEx.Shared\BepInEx.Shared.projitems*{490b052b-7f23-4052-ad04-613856618901}*SharedItemsImports = 5
 		BepInEx.Shared\BepInEx.Shared.projitems*{4ffba620-f5ed-47f9-b90c-dad1316fd9b9}*SharedItemsImports = 5
 		BepInEx.Shared\BepInEx.Shared.projitems*{5c7847fb-c16d-47bd-bb17-1045669f9aa7}*SharedItemsImports = 13
-		BepInEx.Shared\BepInEx.Shared.projitems*{6e6bc1e5-5be8-4566-b3ae-52c4cb218aeb}*SharedItemsImports = 5
 		BepInEx.Shared\BepInEx.Shared.projitems*{d404c973-441d-48ed-b266-c21320ba0d87}*SharedItemsImports = 5
-		BepInEx.Shared\BepInEx.Shared.projitems*{dc89f18b-235b-4c01-ab31-af40dce5c4c7}*SharedItemsImports = 5
 		BepInEx.Shared\BepInEx.Shared.projitems*{eae9fae6-8011-45a3-8b6e-0c7f14210533}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +108,30 @@ Global
 		{429D5F83-7FEC-4D09-AB82-E868EB61AF59}.Release_Unity|Any CPU.Build.0 = Release|Any CPU
 		{429D5F83-7FEC-4D09-AB82-E868EB61AF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{429D5F83-7FEC-4D09-AB82-E868EB61AF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Release_NetFramework|Any CPU.ActiveCfg = Release|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Release_NetFramework|Any CPU.Build.0 = Release|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Release_Unity|Any CPU.ActiveCfg = Release|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Release_Unity|Any CPU.Build.0 = Release|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Release_NetFramework|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Release_NetFramework|Any CPU.Build.0 = Release|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Release_Unity|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Release_Unity|Any CPU.Build.0 = Release|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Release_NetFramework|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Release_NetFramework|Any CPU.Build.0 = Release|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Release_Unity|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Release_Unity|Any CPU.Build.0 = Release|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +141,10 @@ Global
 		{D404C973-441D-48ED-B266-C21320BA0D87} = {6E2DD21E-0854-4F4A-B925-D90E0016D03D}
 		{490B052B-7F23-4052-AD04-613856618901} = {6EC98884-A3DC-4828-85EF-5F10F7519429}
 		{429D5F83-7FEC-4D09-AB82-E868EB61AF59} = {D5F47CFC-E4F3-46EE-B4F3-2474CF7D9E2C}
+		{6BADFA02-2671-424F-AF73-255DA0589F92} = {D5F47CFC-E4F3-46EE-B4F3-2474CF7D9E2C}
+		{4C7FDF92-D420-48E0-A609-5C1AF600DC02} = {6BADFA02-2671-424F-AF73-255DA0589F92}
+		{3CB28671-6BB6-4781-A702-F93D6226ECA2} = {6BADFA02-2671-424F-AF73-255DA0589F92}
+		{FDF0F447-E31B-4100-B028-8DBDAE95AAB6} = {6BADFA02-2671-424F-AF73-255DA0589F92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55AC11EF-F568-4C79-A356-7ED9510145B1}

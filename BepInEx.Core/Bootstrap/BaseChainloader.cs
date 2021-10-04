@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -110,7 +110,7 @@ namespace BepInEx.Bootstrap
 
         #region Contract
 
-        protected virtual string ConsoleTitle => $"BepInEx {Paths.BepInExVersion} - {Paths.ProcessName}";
+        protected virtual string ConsoleTitle => $"BepInEx (GTFO-Modding) {Paths.BepInExVersion} - {Paths.ProcessName}";
 
         private bool _initialized;
 
