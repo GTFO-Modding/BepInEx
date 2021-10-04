@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Description>BepInEx support library for Il2Cpp games</Description>
         <TargetFramework>netstandard2.1</TargetFramework>
@@ -11,6 +11,8 @@
         <Configurations>Debug;Release</Configurations>
         <Platforms>AnyCPU</Platforms>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+        <UnhollowerLibsFolder>$(SolutionDir)vendor\Il2CppAssemblyUnhollower\UnhollowerBaseLib\Libs</UnhollowerLibsFolder>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <DebugType>portable</DebugType>
@@ -31,9 +33,10 @@
         <PackageReference Include="HarmonyX" Version="2.5.5" />
         <PackageReference Include="Iced" Version="1.13.0" />
         <PackageReference Include="Il2CppDumper" Version="6.6.4" />
-        <PackageReference Include="Il2CppReferenceLibs.Core" Version="1.0.0" IncludeAssets="compile" />
         <PackageReference Include="MonoMod.RuntimeDetour" Version="21.9.19.1" />
         <PackageReference Include="Samboy063.Cpp2IL.Core" Version="2021.3.7" />
+        <Reference Include="$(UnhollowerLibsFolder)\UnityEngine.CoreModule.dll" Private="false" />
+        <Reference Include="$(UnhollowerLibsFolder)\Il2Cppmscorlib.dll" Private="false" />
     </ItemGroup>
     <Import Project="..\BepInEx.Shared\BepInEx.Shared.projitems" Label="Shared" />
 
